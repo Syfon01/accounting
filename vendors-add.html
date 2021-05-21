@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Brightstarz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Account software" name="description">
+    <meta content="Lunoz" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
+
+
+  
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/theme.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/custom.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+
+                <div class="d-flex align-items-left">
+                    <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                            <div class="navbar-brand-box">
+                                <a href="index.html" class="logo">
+                                    <img src="assets/img/logo.png">
+                                </a>
+                            </div>
+
+                       
+                </div>
+
+                <div class="d-flex align-items-center">
+
+
+
+
+                    <div class="dropdown d-inline-block">
+
+
+                        <button type="button" class="btn header-item noti-icon waves-effect m-0"
+                            id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="mdi mdi-bell-outline"></i>
+                            <span class="badge badge-danger badge-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="index.html#!" class="small"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar="init" style="max-height: 230px;">
+                                <div class="simplebar-wrapper" style="margin: 0px;">
+                                    <div class="simplebar-height-auto-observer-wrapper">
+                                        <div class="simplebar-height-auto-observer"></div>
+                                    </div>
+                                  
+
+                                </div>
+                              
+                            </div>
+                           
+                        </div>
+                    </div>
+
+               
+
+                    <div class="dropdown d-inline-block ml-2">
+                        <button type="button" class="btn header-item waves-effect m-0" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/img/avatar-3.jpg"
+                                alt="Header Avatar">
+                            
+                            <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                         
+                            <a class="dropdown-item d-flex align-items-center justify-content-between"
+                                href="login.html">
+                                <span>Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="vertical-menu mt-top">
+
+            <div data-simplebar="init" class="h-100 mm-show">
+                <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: -20px; bottom: 0px;">
+                            <div class="simplebar-content-wrapper"
+                                style="height: 100%; padding-right: 20px; padding-bottom: 0px; overflow: hidden scroll;">
+                                <div class="simplebar-content" style="padding: 0px;">
+
+                                    <div id="sidebar-menu">
+                                        <ul class="metismenu list-unstyled mm-show" id="side-menu">
+
+                                            <li class=" my-4">
+                                                <a href="index.html" class="waves-effect"><i
+                                                        class="">
+                                                    <img src="assets/img/home.svg" />
+                                                    </i><span>Home</span></a>
+                                            </li>
+                                            <span class="d-block px-4 text-muted small mb-2">CATEGORIES</span>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                        class="mr-2">
+                                                        <img src="assets/img/customers.svg" />
+                                                    </i><span>Customers</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="customer.html">Customer</a></li>
+                                                    <li><a href="sales.html">Sales</a></li>
+                                                    <li><a href="products.html">Products & Services</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/banking.svg" />
+                                                </i><span>Banking</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="banking.html">Banking</a></li>
+                                                    <li><a href="rules.html">Rules</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/sales.svg" />
+                                                </i><span>Sales</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="invoices.html">Invoices</a></li>
+                                                    <li><a href="retailer-invoices.html">Retailer invoices</a></li>
+                                                    <li><a href="sales-order.html">Sales Order</a></li>
+                                                    <li><a href="payment-received.html">Payment Received</a></li>
+                                                    <li><a href="billing.html">Billing</a></li>
+                                                </ul>
+                                            </li>
+                                          
+                                            <li>
+                                                <a href="budget.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/budgets.svg" />
+                                                </i><span>Budgets</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/Payroll.svg" />
+                                                </i><span>Payroll</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="payroll-setup.html">Payroll Setup</a></li>
+                                                    <li><a href="payroll-management.html">Institution Management</a></li>
+                                                    <li><a href="payroll-element.html">Pay Element</a></li>
+                                                    <li><a href="payroll-scale.html">Pay Scale</a></li>
+                                                    <li><a href="payroll-quick.html">Quick Payroll</a></li>
+                                                    <li><a href="payroll-log.html">Payroll Run Log</a></li>
+                                                    <li><a href="payroll-report.html">Payroll Report</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="taxes.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/Taxes.svg" />
+                                                </i><span>Taxes</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="reports.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/reports.svg" />
+                                                </i><span>Reports</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="inventory.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/inventory.svg" />
+                                                </i><span>Inventory</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/banking.svg" />
+                                                </i><span>Banking</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="banking.html">Banking</a></li>
+                                                    <li><a href="rules.html">Rules</a></li>
+                                                </ul>
+                                            </li>
+
+
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/inventory.svg" />
+                                                </i><span>Expenses</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="expenses.html">Expenses</a></li>
+                                                    <li><a href="vendors.html">Vendors</a></li>
+                                                </ul>
+                                            </li>
+                                            
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simplebar-placeholder" style="width: auto; height: 657px;"></div>
+                </div>
+                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                    <div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;">
+                    </div>
+                </div>
+                <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                    <div class="simplebar-scrollbar"
+                        style="height: 494px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="main-content">
+
+            <div class="page-content bg-pale bg-pale-b">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="d-block mb-3">New Vendor</h3>
+                           
+                            <div class="card bg-white shadow bd-0 min-vh-100">
+                                <div class="card-body">
+
+
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-selected="true">Basic Info</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">Other Details</a>
+                                        </li>
+                                      </ul>
+                                      <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
+
+                                                 
+                            <div class="col-lg-12">
+                        
+                                <div class="row mt-5">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Vendor Type</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                    <div class="form-check-inline custom-control custom-radio custom-control-inline p-0">
+
+                                        <div class="custom-control custom-radio mr-4">
+                                            <input type="radio" id="customRadio1" name="customRadio2" class="custom-control-input" checked>
+                                            <label class="custom-control-label" for="customRadio1"> Business</label>
+                                          </div>
+                                          <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="customRadio2" class="custom-control-input">
+                                            <label class="custom-control-label" for="customRadio2">Individual</label>
+                                          </div>
+                                        </div>      
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Primary Contact</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Full Name - First name Last name">  
+                                      </div>     
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Company Name</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Company Name">  
+                                      </div>     
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Vendor Display Name</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="This Name will be diaplayed on transactions created for customers">  
+                                      </div>     
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Email Address</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Email Address">  
+                                      </div>     
+                                 </div>
+                                </div> 
+                                
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Vendor Phone</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Vendor Phone">  
+                                      </div>   
+                                      <button class="btn btn-primary-50 px-4"><span class="mr-2">+ Add More Details</span> </button>
+                                 </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Website</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Website">  
+                                      </div>     
+                                 </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+
+                                    </div>
+                                  <div class="col-lg-7">
+                                    
+                                      <div class="form-group mb-4 pr-0">
+                                        <a class="btn btn-primary btn-lg px-5" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="true">  Next </a>
+                                           
+                                      </div>     
+                                 </div>
+                                </div> 
+
+
+
+
+                              
+                            </div>    
+                                        </div>
+                                        
+                                        <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+                                             
+                                            <div id="step-one" class="col-lg-12 mt-5">
+
+                                <div class="row">
+                                    <ul id="progressbar">
+                                        <li class="active text-center">
+                                            <span class="d-block text-primary">Address</span></li>
+                                        <li class="text-center"> <span class="d-block text-primary">Contact Person</span></li>
+                                        <li class="text-center"> <span class="d-block text-primary">Remarks</span></li>
+                                      </ul>
+                                </div>
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5 class="mb-5">Billing Address</h5>
+                            </div>
+                        </div>
+                    
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Country</label>
+                                    </div>
+                                  <div class="col-lg-7">
+
+                                    <div class="form-group mb-4 pr-0">
+                                            <select class="form-control" name="countries" id="countries">
+                                            </select>
+                                            <span class="flag ic-abs-right" id="flag"></span>
+                                    </div>  
+
+
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Country">  
+                                      </div>     
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Address</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                       <textarea rows="4" class="form-control"></textarea>
+                                      </div>     
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">City</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="City">  
+                                      </div>     
+                                 </div>
+                                </div> 
+                                
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">State</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="State">  
+                                      </div>     
+                                 </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Phone</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Phone">  
+                                      </div>     
+                                 </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Zip Code</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Zip Code">  
+                                      </div>     
+                                 </div>
+                                </div> 
+
+                                <hr/>
+
+                                <div class="row m-0 justify-content-between">
+                                        <h5 class="mb-5">Shipping Address</h5>
+                                        <p><a href="#"><i class="fa mr-3 fa-copy"></i> Copy Billing Address</a></p>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Country</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Country">  
+                                      </div>     
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Address</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                       <textarea rows="4" class="form-control"></textarea>
+                                      </div>     
+                                 </div>
+                                </div>  
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">City</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="City">  
+                                      </div>     
+                                 </div>
+                                </div> 
+                                
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">State</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="State">  
+                                      </div>     
+                                 </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Phone</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Phone">  
+                                      </div>     
+                                 </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                     <label class="my-2">Zip Code</label>
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <input type="text" class="form-control" placeholder="Zip Code">  
+                                      </div>     
+                                 </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+
+                                    </div>
+                                  <div class="col-lg-7">
+                                      <div class="form-group mb-4 pr-0">
+                                        <button onclick="steptwo()" class="btn btn-lg btn-primary px-5">Next</button>
+                                      </div>     
+                                 </div>
+                                </div> 
+
+
+
+
+                              
+                                            </div>   
+                                            
+                                            
+
+                                            <div style="display: none;" id="step-two" class="col-lg-12 mt-5">
+
+                                                <div class="row">
+                                                    <ul id="progressbar">
+                                                        <li class="active text-center">
+                                                            <span class="d-block text-primary">Address</span></li>
+                                                        <li class="active text-center"> <span class="d-block text-primary">Contact Person</span></li>
+                                                        <li class="text-center"> <span class="d-block text-primary">Remarks</span></li>
+                                                      </ul>
+                                                </div>
+                                        <hr/>
+                
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <h5 class="mb-5">Contact Person</h5>
+                                            </div>
+                                        </div>
+                                    
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                     <label class="my-2">Full Name</label>
+                                                    </div>
+                                                  <div class="col-lg-7">
+                                                      <div class="form-group mb-4 pr-0">
+                                                        <input type="text" class="form-control" placeholder="Full Name">  
+                                                      </div>     
+                                                 </div>
+                                                </div>  
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                     <label class="my-2">Relationship</label>
+                                                    </div>
+                                                    <div class="col-lg-7">
+                                                        <div class="form-group mb-4 pr-0">
+                                                          <input type="text" class="form-control" placeholder="Relationship">  
+                                                        </div>     
+                                                   </div>
+                                                </div> 
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                     <label class="my-2">Phone Number</label>
+                                                    </div>
+                                                    <div class="col-lg-7">
+                                                        <div class="form-group mb-4 pr-0">
+                                                          <input type="text" class="form-control" placeholder="Phone Number">  
+                                                        </div>     
+                                                   </div>
+                                                </div> 
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                     <label class="my-2">Email Address</label>
+                                                    </div>
+                                                    <div class="col-lg-7">
+                                                        <div class="form-group mb-4 pr-0">
+                                                          <input type="text" class="form-control" placeholder="Email Address">  
+                                                        </div>     
+                                                   </div>
+                                                </div> 
+                
+                                             
+                
+                                    
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                
+                                                    </div>
+                                                  <div class="col-lg-7">
+                                                      <div class="form-group mb-4 pr-0">
+                                                        <button onclick="stepone()" onclick="location.href='vendors-steptwo.html'" class="btn btn-lg btn-primary mr-3 px-5">Previous</button>
+                                                        <button onclick="stepthree()" class="btn btn-lg btn-outline-primary px-5">Next</button>
+                                                      </div>     
+                                                 </div>
+                                                </div> 
+                
+                
+                
+                
+                                              
+                                            </div>   
+                                            
+                                            
+                                            <div style="display: none;" id="step-three" class="col-lg-12 mt-5">
+
+                                                <div class="row">
+                                                    <ul id="progressbar">
+                                                        <li class="active text-center">
+                                                            <span class="d-block text-primary">Address</span></li>
+                                                        <li class="active text-center"> <span class="d-block text-primary">Contact Person</span></li>
+                                                        <li class="active text-center"> <span class="d-block text-primary">Remarks</span></li>
+                                                      </ul>
+                                                </div>
+                                        <hr/>
+                
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <h5 class="mb-5">Remarks</h5>
+                                            </div>
+                                        </div>
+                                    
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                     <label class="my-2">Currency</label>
+                                                    </div>
+                                                  <div class="col-lg-7">
+                                                      <div class="form-group mb-4 pr-0">
+                                                        <input type="text" class="form-control" placeholder="Currency">  
+                                                      </div>     
+                                                 </div>
+                                                </div>  
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                     <label class="my-2">Enable Portal Access</label>
+                                                    </div>
+                                                  <div class="col-lg-7">
+                                                      <div class="form-group mb-4 pr-0">
+                                                        <input type="text" class="form-control" placeholder="Enable Portal Access">  
+                                                      </div>     
+                                                 </div>
+                                                </div>  
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                                                     <label class="my-2">Enable Portal Access</label>
+                                                    </div>
+                                                  <div class="col-lg-7">
+                                                      <div class="form-group mb-4 pr-0">
+                                                    <textarea rows="4" class="form-control"></textarea>
+                                                      </div>     
+                                                 </div>
+                                                </div>  
+                
+                                              
+                
+                                                <div class="row">
+                                                    <div class="col-lg-2">
+                
+                                                    </div>
+                                                  <div class="col-lg-7">
+                                                      <div class="form-group mb-4 pr-0">
+                                                        <button class="btn btn-lg btn-primary mr-3 px-5">Submit</button>
+                                                        <button onclick="steptwo()" class="btn btn-lg btn-outline-primary px-5">Cancel</button>
+                                                      </div>     
+                                                 </div>
+                                                </div> 
+                
+                
+                
+                
+                                              
+                                            </div>  
+                
+
+                                        </div>
+                                       
+                                      </div>
+
+
+
+
+                                             
+
+
+                            </div>
+
+
+
+                           </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                 
+                </div> 
+            </div>
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+
+    </div>
+
+
+
+
+    <!-- jQuery  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/metismenu.min.js"></script>
+    <script src="./assets/js/waves.js"></script>
+    <script src="./assets/js/simplebar.min.js"></script>
+
+    <!-- Morris Js-->
+    <script src="./assets/js/morris.min.js"></script>
+    <!-- Raphael Js-->
+    <script src="./assets/js/raphael.min.js"></script>
+
+    <!-- Morris Custom Js-->
+    <script src="./assets/js/dashboard-demo.js"></script>
+
+    <!-- App js -->
+    <script src="./assets/js/theme.js"></script>
+   
+    <script>
+        const xhttp = new XMLHttpRequest();
+const select = document.getElementById("countries");
+const flag = document.getElementById("flag");
+
+let countries;
+
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    countries = JSON.parse(xhttp.responseText);
+    assignValues();
+    handleCountryChange();
+  }
+};
+xhttp.open("GET", "https://restcountries.eu/rest/v2/all", true);
+xhttp.send();
+
+function assignValues() {
+  countries.forEach(country => {
+    const option = document.createElement("option");
+    option.value = country.alpha2Code;
+    option.textContent = country.name;
+    select.appendChild(option);
+  });
+}
+
+function handleCountryChange() {
+  const countryData = countries.find(
+    country => select.value === country.alpha2Code
+  );
+  flag.style.backgroundImage = `url(${countryData.flag})`;
+}
+
+select.addEventListener("change", handleCountryChange.bind(this));
+
+    </script>
+
+    <script>
+        function stepone(){
+  document.getElementById('step-one').style.display = 'block';
+  document.getElementById('step-two').style.display = 'none';
+  document.getElementById('step-three').style.display = 'none';
+}
+
+function steptwo(){
+  document.getElementById('step-one').style.display = 'none';
+  document.getElementById('step-two').style.display = 'block';
+  document.getElementById('step-three').style.display = 'none';
+}
+
+function stepthree(){
+  document.getElementById('step-one').style.display = 'none';
+  document.getElementById('step-two').style.display = 'none';
+  document.getElementById('step-three').style.display = 'block';
+}
+
+</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Brightstarz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Account software" name="description">
+    <meta content="Lunoz" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+  
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/theme.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/custom.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+
+                <div class="d-flex align-items-left">
+                    <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect"
+                        id="vertical-menu-btn">
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+
+                            <div class="navbar-brand-box">
+                                <a href="index.html" class="logo">
+                                    <img src="assets/img/logo.png">
+                                </a>
+                            </div>
+
+                       
+                </div>
+
+                <div class="d-flex align-items-center">
+
+
+
+
+                    <div class="dropdown d-inline-block">
+
+
+                        <button type="button" class="btn header-item noti-icon waves-effect m-0"
+                            id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="mdi mdi-bell-outline"></i>
+                            <span class="badge badge-danger badge-pill">3</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                            aria-labelledby="page-header-notifications-dropdown">
+                            <div class="p-3">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="m-0"> Notifications </h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="index.html#!" class="small"> View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-simplebar="init" style="max-height: 230px;">
+                                <div class="simplebar-wrapper" style="margin: 0px;">
+                                    <div class="simplebar-height-auto-observer-wrapper">
+                                        <div class="simplebar-height-auto-observer"></div>
+                                    </div>
+                                  
+
+                                </div>
+                              
+                            </div>
+                           
+                        </div>
+                    </div>
+
+               
+
+                    <div class="dropdown d-inline-block ml-2">
+                        <button type="button" class="btn header-item waves-effect m-0" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="rounded-circle header-profile-user" src="assets/img/avatar-3.jpg"
+                                alt="Header Avatar">
+                            
+                            <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                         
+                            <a class="dropdown-item d-flex align-items-center justify-content-between"
+                                href="login.html">
+                                <span>Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="vertical-menu mt-top">
+
+            <div data-simplebar="init" class="h-100 mm-show">
+                <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: -20px; bottom: 0px;">
+                            <div class="simplebar-content-wrapper"
+                                style="height: 100%; padding-right: 20px; padding-bottom: 0px; overflow: hidden scroll;">
+                                <div class="simplebar-content" style="padding: 0px;">
+
+                                    <div id="sidebar-menu">
+                                        <ul class="metismenu list-unstyled mm-show" id="side-menu">
+
+                                            <li class=" my-4">
+                                                <a href="index.html" class="waves-effect"><i
+                                                        class="">
+                                                    <img src="assets/img/home.svg" />
+                                                    </i><span>Home</span></a>
+                                            </li>
+                                            <span class="d-block px-4 text-muted small mb-2">CATEGORIES</span>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                        class="mr-2">
+                                                        <img src="assets/img/customers.svg" />
+                                                    </i><span>Customers</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="customer.html">Customer</a></li>
+                                                    <li><a href="sales.html">Sales</a></li>
+                                                    <li><a href="products.html">Products & Services</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/banking.svg" />
+                                                </i><span>Banking</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="banking.html">Banking</a></li>
+                                                    <li><a href="rules.html">Rules</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/sales.svg" />
+                                                </i><span>Sales</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="invoices.html">Invoices</a></li>
+                                                    <li><a href="retailer-invoices.html">Retailer invoices</a></li>
+                                                    <li><a href="sales-order.html">Sales Order</a></li>
+                                                    <li><a href="payment-received.html">Payment Received</a></li>
+                                                    <li><a href="billing.html">Billing</a></li>
+                                                </ul>
+                                            </li>
+                                          
+                                            <li>
+                                                <a href="budget.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/budgets.svg" />
+                                                </i><span>Budgets</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/Payroll.svg" />
+                                                </i><span>Payroll</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="payroll-setup.html">Payroll Setup</a></li>
+                                                    <li><a href="payroll-management.html">Institution Management</a></li>
+                                                    <li><a href="payroll-element.html">Pay Element</a></li>
+                                                    <li><a href="payroll-scale.html">Pay Scale</a></li>
+                                                    <li><a href="payroll-quick.html">Quick Payroll</a></li>
+                                                    <li><a href="payroll-log.html">Payroll Run Log</a></li>
+                                                    <li><a href="payroll-report.html">Payroll Report</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="taxes.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/Taxes.svg" />
+                                                </i><span>Taxes</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="reports.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/reports.svg" />
+                                                </i><span>Reports</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="inventory.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/inventory.svg" />
+                                                </i><span>Inventory</span></a>
+                                            </li>
+                                     
+
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/inventory.svg" />
+                                                </i><span>Expenses</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="expenses.html">Expenses</a></li>
+                                                    <li><a href="vendors.html">Vendors</a></li>
+                                                </ul>
+                                            </li>
+                                            
+
+                                        </ul>
+                                    </div>
+                                    <!-- Sidebar -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simplebar-placeholder" style="width: auto; height: 657px;"></div>
+                </div>
+                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                    <div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;">
+                    </div>
+                </div>
+                <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                    <div class="simplebar-scrollbar"
+                        style="height: 494px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-left">
+                                <button onclick="location.href='customer.html'" type="button" class="btn btn-lg btn-link waves-effect text-muted">Customer</button>
+                                <button onclick="location.href='sales.html'" type="button" class="btn btn-lg btn-link waves-effect text-muted">Sales</button>
+                                <button onclick="location.href='products.html'" type="button" class="btn btn-lg btn-link waves-effect border-bottom bd-radius-0">Products and services</button>
+
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card no-bg bd-0">
+                                <div class="card-body p-5">
+                                
+                                    <div class="row m-0 justify-content-center">
+                                    <img src="assets/img/img-products-no.png" />
+                               </div>
+                           
+                               <div class="row m-0 justify-content-center">
+                                   <div class="col-lg-8 text-center">
+                                    <h4 class="d-block my-4">Add your products and services. It will save you time when  creating your next invoice or receipt</h4>
+                                   </div>
+                               </div> 
+
+                                   <div class="row m-0 justify-content-center">
+                                    <button type="button" class="btn btn-lg btn-primary waves-effect waves-light mx-3" data-toggle="modal" data-target=".bd-example-modal-xl">Add customers</button>
+                                   </div> 
+                                 
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+
+                    </div>
+                    <!-- end row-->
+
+
+                 
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h4" id="myExtraLargeModalLabel">Extra large modal</h5>
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Overlay-->
+    <div class="menu-overlay"></div>
+
+
+    <!-- jQuery  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/metismenu.min.js"></script>
+    <script src="./assets/js/waves.js"></script>
+    <script src="./assets/js/simplebar.min.js"></script>
+
+    <!-- Morris Js-->
+    <script src="./assets/js/morris.min.js"></script>
+    <!-- Raphael Js-->
+    <script src="./assets/js/raphael.min.js"></script>
+
+    <!-- Morris Custom Js-->
+    <script src="./assets/js/dashboard-demo.js"></script>
+
+    <!-- App js -->
+    <script src="./assets/js/theme.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready( function () {
+    $('#table_data').DataTable();
+} );
+    </script>
+
+    
+    <script>
+        var ctx = document.getElementById('incomeChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+
+            options: {
+  scales: {
+    x: [{
+      gridLines: {
+        display: false // This removes vertical grid lines
+      }
+    }],
+    y: [{
+      gridLines: {
+        drawBorder: false // This removes the yAxis border
+      }
+    }]
+  }
+}
+
+       
+        });
+        </script>
+
+</body>
+
+</html>
