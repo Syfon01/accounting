@@ -14,10 +14,9 @@
     <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
     <!-- App css -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
-  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
 
 
   
@@ -26,6 +25,7 @@
     <link href="../assets/css/theme.min.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
     <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/js/jquery.steps/jquery-steps.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -48,18 +48,10 @@
                                     <img src="../assets/img/logo.png">
                                 </a>
                             </div>
-
-                       
                 </div>
 
                 <div class="d-flex align-items-center">
-
-
-
-
                     <div class="dropdown d-inline-block">
-
-
                         <button type="button" class="btn header-item noti-icon waves-effect m-0"
                             id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -91,9 +83,6 @@
                            
                         </div>
                     </div>
-
-               
-
                     <div class="dropdown d-inline-block ml-2">
                         <button type="button" class="btn header-item waves-effect m-0" id="page-header-user-dropdown"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -225,8 +214,6 @@
                                                   <li><a href="vendors.html">Vendors</a></li>
                                               </ul>
                                           </li>
-                                          
-
                                       </ul>
                                   </div>
                                   <!-- Sidebar -->
@@ -251,166 +238,291 @@
             <div class="page-content bg-pale-b">
                 <div class="container-fluid">
                     <div class="row  justify-content-between mb-2">
-                        <div class="col-lg-4 col-md-4 col-6 mt-2 pt-2"> 
-                            <h3>Sales Order</h3>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-6 mt-2">
-                            <div class="d-flex float-md-right">
-                            <!-- <button class="btn btn-outline-primary"> <i class="fa fa-upload mr-1" aria-hidden="true"></i> Upload Bulk invoice</button> -->
-                            <a href="./new-sales.html" class="btn btn-primary ml-3"><i class="fa fa-plus mr-1" aria-hidden="true"></i> Create New</a>
-                            </div>
+                        <div class="col-lg-4 col-md-4 col-12 mt-2 pt-2"> 
+                            <h3>New Customer</h3>
                         </div>
                     </div>
 
                     <div class="card shadow bg-white">
-                        <div class="card-header bg-white py-3">
-                            <div class="row">
-                                <div class="col-md-1 col-1 pr-md-0">
-                                    <div class="custom-control custom-checkbox pt-2">
-                                        <input type="checkbox" class="custom-control-input "  name="select-all" id="customCheck">
-                                        <label class="custom-control-label" for="customCheck">
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-11 pl-md-0">
-                                    <div class="input-group ">
-                                        <div class="input-group-prepend">
-                                          <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa fa-search"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control control-height" aria-label="Sizing example input" aria-describedby="" placeholder="Search invoice">
-                                      </div>
-                                </div>
-                                
-                                  <div class="col-md-2 col-6  mt-2 mt-md-0">
-                                    <label for="" class="d-inline mr-3">Filter</label>
-                                    <button class="btn btn-outline-gray mb-0 px-md-3" data-toggle="modal" data-target="#filterModal">
-                                        All
-                                      <span class="fa fa-list-ul ml-3"></span>  
-                                    </button>
-                                  </div>
-                                  <div class="col-md-3 col-6 mt-2 mt-md-0">
-                                    <label for="" class="d-inline mr-3">Sort by</label>
-                                    <select class="form-control width-control control-height d-inline" id="exampleFormControlSelect1">
-                                      <option>Most Recent</option>
-                                      <option>Oldest</option>
-                                      <option></option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-2 col-6 mt-2 mt-md-0">
-                                    <button class="btn btn-outline-gray w-100 mb-0" data-toggle="modal" data-target="#exportModal">
-                                      <span>
-                                        <i data-feather="download" class="mg-r-5"></i>
-                                          Export as
-                                      </span>
-                                    </button>
-                                  </div>
-                                  
-                                  <div class="col-md-1 col-6 pl-0 mt-2 mt-md-0">
-                                    <button class="btn btn-primary-outline mb-0">
-                                      <span>
-                                        <i class="fa fa-print tx-primary"></i>
-                                        Print
-                                      </span>
-                                    </button>
-                                  </div>
-                            </div>
-                        </div>
+                        
                         <div class="card-body">
-                            <table id="banking-table" class="display table-hover" style="width:100%">
-                                <thead class="thead-bg">
-                                    <tr class="text-uppercase">
-                                        <th></th>
-                                        <th>DATE</th>
-                                        <th>SALES ORDER#</th>
-                                        <th>Customer name</th>
-                                        <th>DELIVERY METHOD</th>
-                                        <th>SHIPMENT DATE</th>
-                                        <th>Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"  data-href=''>
-                                          <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                            <label class="custom-control-label" for="customCheck1">
-                                            </label>
-                                          </div>
-                                        </th>
-                                        <td class='clickable-row' data-href=''>01 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>SLS-00001</td>
-                                        <td class='clickable-row' data-href=''>Solanke Taiwo</td>
-                                        <td class='clickable-row' data-href=''>Dispatch </td>
-                                        <td class='clickable-row' data-href=''>19 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>#0.00 </td>
-                                    </tr>
-                        
-                                    <tr>
-                                        <th scope="row"  data-href=''>
-                                          <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                            <label class="custom-control-label" for="customCheck2">
-                                            </label>
-                                          </div>
-                                        </th>
-                                        <td class='clickable-row' data-href=''>01 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>SLS-00001</td>
-                                        <td class='clickable-row' data-href=''>Solanke Taiwo</td>
-                                        <td class='clickable-row' data-href=''>Dispatch </td>
-                                        <td class='clickable-row' data-href=''>19 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>#0.00 </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"  data-href=''>
-                                          <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                            <label class="custom-control-label" for="customCheck3">
-                                            </label>
-                                          </div>
-                                        </th>
-                                        <td class='clickable-row' data-href=''>01 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>SLS-00001</td>
-                                        <td class='clickable-row' data-href=''>Solanke Taiwo</td>
-                                        <td class='clickable-row' data-href=''>Dispatch</td>
-                                        <td class='clickable-row' data-href=''>19 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>#0.00 </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"  data-href=''>
-                                          <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                            <label class="custom-control-label" for="customCheck4">
-                                            </label>
-                                          </div>
-                                        </th>
-                                        <td class='clickable-row' data-href=''>01 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>SLS-00001</td>
-                                        <td class='clickable-row' data-href=''>Solanke Taiwo</td>
-                                        <td class='clickable-row' data-href=''>Dispatch</td>
-                                        <td class='clickable-row' data-href=''>19 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>#0.00 </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"  data-href=''>
-                                          <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                            <label class="custom-control-label" for="customCheck5">
-                                            </label>
-                                          </div>
-                                        </th>
-                                        <td class='clickable-row' data-href=''>01 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>SLS-00001</td>
-                                        <td class='clickable-row' data-href=''>Solanke Taiwo</td>
-                                        <td class='clickable-row' data-href=''>Dispatch</td>
-                                        <td class='clickable-row' data-href=''>19 Mar 2021</td>
-                                        <td class='clickable-row' data-href=''>#0.00 </td>
-                                    </tr>
-                        
-                         
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Basic Info</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Other Details</a>
+                            </li>
+                            
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              <form>
+                                <div class="col-lg-8 col-12 py-4">
+                                  <div class="form-group form-row">
+                                    <div class="col-md-4 col-12">
+                                      <label for="formGroupExampleInput" class="">Customer Type</label>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="customRadioInline1">Business</label>
+                                      </div>
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline2">Individual</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group form-row">
+                                    <div class="col-md-4 col-12">
+                                       <label for="formGroupExampleInput" class="">Primary Contact</label>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                     <input type="text" class="form-control" placeholder="Full Name (First Name - Last Name)">
+                                    </div>
+                                  </div>
+                                  <div class="form-group form-row">
+                                    <div class="col-md-4 col-12">
+                                       <label for="formGroupExampleInput" class="">Company Name</label>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                     <input type="text" class="form-control" placeholder="Enter company Name">
+                                    </div>
+                                  </div>
+                                  <div class="form-group form-row">
+                                    <div class="col-md-4 col-12">
+                                       <label for="formGroupExampleInput" class="">Customer Display Name</label>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                     <input type="text" class="form-control" placeholder="This name will be displayed on transactions created for customer">
+                                    </div>
+                                  </div>
+                                  <div class="form-group form-row">
+                                    <div class="col-md-4 col-12">
+                                       <label for="formGroupExampleInput" class="">Email Address</label>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                     <input type="email" class="form-control" placeholder="Enter email">
+                                    </div>
+                                  </div>
+                                  <div class="form-group form-row">
+                                    <div class="col-md-4 col-12">
+                                       <label for="formGroupExampleInput" class="">Customer Phone</label>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                     <input type="text" class="form-control" placeholder="Enter Phone number">
+
+                                    <button class="btn btn-add mt-2 mb-0"><i class="fa fa-plus mr-2"></i> Add More Details</button>
+                                    </div>
+                                  </div>
+                                  <div class="form-group form-row">
+                                    <div class="col-md-4 col-12">
+                                       <label for="formGroupExampleInput" class="">Website</label>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                     <input type="text" class="form-control" placeholder="Enter Website">
+                                    </div>
+                                  </div>
+                                </div>
                                 
-                                </tbody>
-                        
-                            </table>
+                                <div class="row col-md-8 px-0">
+                                  <div class="col-lg-8 offset-lg-4 col-12">
+                                    <div class="row ">
+                                      <div class="col-md-4 col-7">
+                                        <button class="btn btn-primary w-100">Save</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                              <div class="col-lg-8 col-12">
+                                <div id="wizard1">
+                                  <h5>Billing Address</h5>
+                                  <section>
+                                    <form>
+                                      <div class="form-group form-row mt-4">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Country</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter ">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Address</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                          <textarea name="" id="" class="form-control" rows="3" placeholder="Enter your address"></textarea>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">City</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="This name will be displayed on transactions created for customer">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">State</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter your state">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Phone</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Phone number">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Zip Code</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Zip code">
+                                        </div>
+                                      </div>
+                                      <hr>
+
+                                      <h5>Shipping Address</h5>
+                                      <div class="form-group form-row mt-4">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Country</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter ">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Address</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                          <textarea name="" id="" class="form-control" rows="3" placeholder="Enter your address"></textarea>
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">City</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="This name will be displayed on transactions created for customer">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">State</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter your state">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Phone</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Phone number">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Zip Code</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Zip code">
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </section>
+                                  <h5>Contact Person</h5>
+                                  <section>
+                                    <form>
+                                      <div class="form-group form-row mt-4">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Full Name</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Full Name (First Name - Last Name)">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Relationship</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Relationship">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Phone Number</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Phone number">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Email Address</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="email" class="form-control" placeholder="Enter email address">
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </section>
+                                  <h5>Remark</h5>
+                                  <section>
+                                    <form>
+                                      <div class="form-group form-row mt-4">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Currency</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="NGN (Naira)">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Enable Portal Access</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Portal Address">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Phone Number</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                        <input type="text" class="form-control" placeholder="Enter Phone number">
+                                        </div>
+                                      </div>
+                                      <div class="form-group form-row">
+                                        <div class="col-md-4 col-12">
+                                          <label for="formGroupExampleInput" class="">Remarks</label>
+                                        </div>
+                                        <div class="col-md-8 col-12">
+                                          <textarea name=""  rows="3" class="form-control" placeholder="This is for internal use"></textarea>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </section>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                     </div>
                        
@@ -540,43 +652,23 @@
     <!-- App js -->
     <script src="../assets/js/theme.js"></script>
 
-
+    <!-- step js -->
+    <script src="./assets/js/jquery.steps/jquery.steps.min.js"></script>
 
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
-
-    <script type="text/javascript" language="javascript" src="https://nightly.datatables.net/responsive/js/dataTables.responsive.min.js">
-    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 
 <script>
 $(document).ready(function() {
-    $('#banking-table').DataTable({
-    responsive: true,
-    "searching": false,
-    "lengthChange": false,
-    columnDefs: [ {
-    orderable: false,
-    className: 'select-checkbox',
-    targets:   0
-    } ],
-        
+  $('#wizard1').steps({
+  headerTag: 'h5',
+  bodyTag: 'section',
+  autoFocus: true,
+  titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>'
 });
-
-    // $('#banking-table').DataTable( {
-    //     responsive: true,
-    //     columnDefs: [ {
-    //         orderable: false,
-    //         className: 'select-checkbox',
-    //         targets:   0
-    //     } ],
-    //     "searching": false,
-    //     "lengthChange": false,
-        
-    //     order: [[ 1, 'asc' ]]
-    // } );
 } );
     </script>
 
