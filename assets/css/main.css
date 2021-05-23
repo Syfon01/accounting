@@ -185,4 +185,6 @@ table th:nth-child(3), td:nth-child(3) {
   height: 50vh;
   overflow-y: scroll;
 }
-
+ table.dataTable tbody th.select-checkbox:before{
+   content: none;
+ }
