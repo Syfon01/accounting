@@ -23,12 +23,6 @@
 .thead-bg{
   background-color: #EAEDE8;
 }
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  /* background-color: #B11E1E1A; */
-  border-top: 1px solid #4C9A2A;
-  border-bottom: 1px solid #4C9A2A;
-
-}
 .dot {
   height: 4px;
   width: 4px;
@@ -197,3 +191,96 @@ width: 12vw;
    background-color: #cac7c7!important;
    color: #222a3e;
  }
+
+
+ .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border:none;
+}
+.light-blue-card:hover{
+  background-color: #E3EBFF;
+  color: #000!important;
+}
+.open.dropdown-menu {
+  right:0;
+  margin-left: 9rem;
+}
+
+.avatar-sm.tab{
+  margin-top: -5px;
+}
+.tx-24{
+  font-size: 1.5rem;
+}
+.avatar-lg {
+  width: 64px;
+  height: 64px;
+}
+.avatar-sm {
+  width: 32px;
+  height: 32px;
+}
+.tx-semibold{
+  font-weight: 600;
+}
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+.page-item.active .page-link {
+  background-color: #2E5BFF;
+}
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #2E5BFF;
+  border-color: #2E5BFF;
+}
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #2E5BFF;
+  background-color: #fff;
+  border: 1px solid #cdd4e0;
+  border-radius: 0px!important;
+}
+
+.btn-primary.new{
+  color: #fff;
+    background-color: #2E5BFF!important;
+    border-color: #2E5BFF!important;
+}
+.btn-primary.new:hover{
+  color: #fff;
+    background-color: #2E5BFF;
+    border-color: #1946e9!important;
+}
+.btn-outline-primary.new{
+  color: #2E5BFF;
+  border: 1px solid #2E5BFF!important;
+}
+.btn-outline-primary.new:hover{
+  background: #2E5BFF!important;
+  border: 1px solid #CED4DA!important;
+}
+.custom-control-input.new:checked~.custom-control-label.new::before{
+  border-color: #2E5BFF!important;
+  background: #2E5BFF!important;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Brightstarz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Account software" name="description">
+    <meta content="Lunoz" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+  
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/theme.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+  <body>
+    <div id="layout-wrapper">
+  
+      <header id="page-topbar">
+        <div class="navbar-header">
+
+            <div class="d-flex align-items-left">
+                <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect"
+                    id="vertical-menu-btn">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
+
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo">
+                                <img src="../assets/img/logo.png">
+                            </a>
+                        </div>
+
+                   
+            </div>
+
+            <div class="d-flex align-items-center">
+
+
+
+
+                <div class="dropdown d-inline-block">
+
+
+                    <button type="button" class="btn header-item noti-icon waves-effect m-0"
+                        id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <span class="badge badge-danger badge-pill">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                        aria-labelledby="page-header-notifications-dropdown">
+                        <div class="p-3">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-0"> Notifications </h6>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="index.html#!" class="small"> View All</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar="init" style="max-height: 230px;">
+                            <div class="simplebar-wrapper" style="margin: 0px;">
+                                <div class="simplebar-height-auto-observer-wrapper">
+                                    <div class="simplebar-height-auto-observer"></div>
+                                </div>
+                              
+
+                            </div>
+                          
+                        </div>
+                       
+                    </div>
+                </div>
+
+           
+
+                <div class="dropdown d-inline-block ml-2">
+                    <button type="button" class="btn header-item waves-effect m-0" id="page-header-user-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="../assets/img/avatar-3.jpg"
+                            alt="Header Avatar">
+                        
+                        <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                     
+                        <a class="dropdown-item d-flex align-items-center justify-content-between"
+                            href="login.html">
+                            <span>Log Out</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+      <div class="content mt-5">
+      <div class="container py-5">
+       <p class="tx-24 tx-bold mb-0">Recently Accessed</p>
+       <p class="tx-16 tx-gray mb-0">Clients you recently worked with</p>
+
+       <div class="row my-2 justify-content-between">
+         <div class="col-lg-3 col-md-6 col-12 mt-4">
+           <div class="card card-body light-blue-card px-2 py-3">
+            <div class="d-flex">
+              <div>
+                <div class="avatar avatar-lg mr-2"><img src="./assets/img/avatar.png" class="rounded-circle" alt=""></div>
+              </div>
+              <div>
+                <p class="tx-20 tx-bold mb-0 pt-1">RouteMaker</p>
+                <p class="mb-0 tx-gray tx-semibold">routemaker@gmail.com</p>
+                <p class="tx-gray mt-4 mb-0"><i class="fa fa-clock-o mr-2"></i> 2 mins ago</p>
+              </div>
+            </div>
+           </div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-12 mt-4">
+          <div class="card card-body light-blue-card px-2 py-3">
+           <div class="d-flex">
+             <div>
+               <div class="avatar avatar-lg mr-2"><img src="./assets/img/avatar.png" class="rounded-circle" alt=""></div>
+             </div>
+             <div>
+               <p class="tx-20 tx-bold mb-0 pt-1">RouteMaker</p>
+               <p class="mb-0 tx-gray tx-semibold">routemaker@gmail.com</p>
+               <p class="tx-gray mt-4 mb-0"><i class="fa fa-clock-o mr-2"></i> 2 mins ago</p>
+             </div>
+           </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 mt-4">
+          <div class="card card-body light-blue-card px-2 py-3">
+           <div class="d-flex">
+             <div>
+               <div class="avatar avatar-lg mr-2"><img src="./assets/img/avatar.png" class="rounded-circle" alt=""></div>
+             </div>
+             <div>
+               <p class="tx-20 tx-bold mb-0 pt-1">RouteMaker</p>
+               <p class="mb-0 tx-gray tx-semibold">routemaker@gmail.com</p>
+               <p class="tx-gray mt-4 mb-0"><i class="fa fa-clock-o mr-2"></i> 2 mins ago</p>
+             </div>
+           </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 mt-4">
+          <div class="card card-body light-blue-card px-2 py-3">
+           <div class="d-flex">
+             <div>
+               <div class="avatar avatar-lg mr-2"><img src="./assets/img/avatar.png" class="rounded-circle" alt=""></div>
+             </div>
+             <div>
+               <p class="tx-20 tx-bold mb-0 pt-1">RouteMaker</p>
+               <p class="mb-0 tx-gray tx-semibold">routemaker@gmail.com</p>
+               <p class="tx-gray mt-4 mb-0"><i class="fa fa-clock-o mr-2"></i> 2 mins ago</p>
+             </div>
+           </div>
+          </div>
+        </div>
+     </div>
+    <div class="row justify-content-between mt-5">
+      <div class="col-md-8 col-12">
+        <p class="tx-20 tx-bold mb-1">Select Client to work on</p>
+        <p class="tx-gray tx-14 mb-2">Choose any of the listed client to get access to the accounting platform</p>
+      </div>
+      <div class="col-md-4 mg-y-20 mg-md-t-0">
+        <div class="search-form pd-md-t-10">
+          <input type="search" class="form-control" placeholder="Search">
+          <button class="btn" type="button"><i data-feather="search"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="card card-body p-0 border-0 shadow-sm bg-transparent">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0" id="employee">
+          <thead class="thead-bg text-uppercase tx-gray text-semibold">
+            <tr class="">
+              <th scope="col"></th>
+              <th scope="col">Name</th>
+              <th scope="col" class="">Email</th>
+              <th scope="col" class="">BUSINESS TYPE</th>
+              <th scope="col" class="text-center">DATE CREATED</th>
+              <th scope="col" class="text-right">LAST ACCESSED</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr class=''>
+              <th scope="row" style="width: 15px;">
+                <div class="custom-control custom-checkbox pt-2 pb-0">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">
+                  </label>
+                </div>
+              </th>
+              <td>
+                <div class="d-flex">
+                  <div class="avatar avatar-sm tab mr-2"><img src="./assets/img/staff.png" class="rounded-circle" alt=""></div>
+                <p class="mb-0 pd-t-">
+                 Adegborioye & Sons 
+                </p>
+                </div>
+              </td>
+              <td class="">AdegborioyeandSons1907@gmail.com</td>
+              <td class="">Accounting & Auditing</td>
+              <td class="text-center">02/06/2019</td>
+              <td class="text-right">50 mins ago</td>
+            </tr>
+            <tr class=''>
+              <th scope="row" style="width: 15px;">
+                <div class="custom-control custom-checkbox pt-2 pb-0">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2">
+                  </label>
+                </div>
+              </th>
+              <td>
+                <div class="d-flex">
+                  <div class="avatar avatar-sm tab mr-2"><img src="./assets/img/staff.png" class="rounded-circle" alt=""></div>
+                <p class="mb-0 pd-t-">
+                 Adegborioye & Sons 
+                </p>
+                </div>
+              </td>
+              <td class="">thesmiths@gmail.com</td>
+              <td class="">Accounting & Auditing</td>
+              <td class="text-center">02/06/2019</td>
+              <td class="text-right">Yesterday</td>
+            </tr>
+            <tr class=''>
+              <th scope="row" style="width: 15px;">
+                <div class="custom-control custom-checkbox pt-2 pb-0">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3">
+                  </label>
+                </div>
+              </th>
+              <td>
+                <div class="d-flex">
+                  <div class="avatar avatar-sm tab mr-2"><img src="./assets/img/staff.png" class="rounded-circle" alt=""></div>
+                <p class="mb-0 pd-t-">
+                 Adegborioye & Sons 
+                </p>
+                </div>
+              </td>
+              <td class="">thesmiths@gmail.com</td>
+              <td class="">Accounting & Auditing</td>
+              <td class="text-center">02/06/2019</td>
+              <td class="text-right">50 mins ago</td>
+            </tr>
+            <tr class='' style="width: 15px;">
+              <th scope="row">
+                <div class="custom-control custom-checkbox pt-2 pb-0">
+                  <input type="checkbox" class="custom-control-input" id="customCheck4">
+                  <label class="custom-control-label" for="customCheck4">
+                  </label>
+                </div>
+              </th>
+              <td>
+                <div class="d-flex">
+                  <div class="avatar avatar-sm tab mr-2"><img src="./assets/img/staff.png" class="rounded-circle" alt=""></div>
+                <p class="mb-0 pd-t-">
+                 Adegborioye & Sons 
+                </p>
+                </div>
+              </td>
+              <td class="">AdegborioyeandSons1907@gmail.com</td>
+              <td class="">Industrial Finance</td>
+              <td class="text-center">02/06/2019</td>
+              <td class="text-right">4 months ago</td>
+            </tr>
+            <tr class=''>
+              <th scope="row" style="width: 15px;">
+                <div class="custom-control custom-checkbox pt-2 pb-0">
+                  <input type="checkbox" class="custom-control-input" id="customCheck5">
+                  <label class="custom-control-label" for="customCheck5">
+                  </label>
+                </div>
+              </th>
+              <td>
+                <div class="d-flex">
+                  <div class="avatar avatar-sm tab mr-2"><img src="./assets/img/staff.png" class="rounded-circle" alt=""></div>
+                <p class="mb-0 pd-t-">
+                 Adegborioye & Sons 
+                </p>
+                </div>
+              </td>
+              <td class="">AdegborioyeandSons1907@gmail.com</td>
+              <td class="">Marketing</td>
+              <td class="text-center">02/06/2019</td>
+              <td class="text-right">50 mins ago</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="dropdown">
+            <button class="btn btn-primary new dropdown-toggle w-100" type="button" id="droprightMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Download
+            </button>
+            <div class="dropdown-menu open" aria-labelledby="droprightMenuButton">
+              <a class="dropdown-item" href="#">Download all</a>
+              <a class="dropdown-item" href="#">Select items</a>
+            </div>
+          </div>
+          <div class="d-flex mt-4">
+            <div class=" mr-4">
+              <div class="custom-control custom-radio new">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input new" checked>
+                <label class="custom-control-label new" for="customRadio1">.pdf</label>
+              </div>
+            </div>
+            <div class="">
+              <div class="custom-control custom-radio new">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input  new">
+            <label class="custom-control-label new" for="customRadio2">.xlxs</label>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <nav aria-label="Page navigation example" class="mt-5">
+          <ul class="pagination justify-content-end bd-0">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+    
+      </div>
+    </div>
+    
+      
+       
+    </div><!-- container -->
+      
+  
+  
+    </div>
+    </div>
+
+    <!-- jQuery  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/metismenu.min.js"></script>
+    <script src="../assets/js/waves.js"></script>
+    <script src="../assets/js/simplebar.min.js"></script>
+
+    <!-- Morris Js-->
+    <script src="../assets/js/morris.min.js"></script>
+    <!-- Raphael Js-->
+    <script src="../assets/js/raphael.min.js"></script>
+
+    <!-- Morris Custom Js-->
+    <script src="../assets/js/dashboard-demo.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/js/theme.js"></script>
+
+    <!-- for multiselect dropdown  -->
+    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
+
+    <script>
+      $(document).ready( function () {
+       $('.display').DataTable({
+         "paging": true,
+         "info": true,
+         "responsive": true,
+         "aoColumnDefs": [{
+             "bSortable": false,
+             "aTargets": ["no-sort"]
+         }],
+         
+         "bInfo": true
+       });
+       
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+         $('.display:visible').each( function(e) {
+           $(this).DataTable().columns.adjust().responsive.recalc();
+         });
+       });
+
+         //date picker
+     let start = moment().subtract(29, 'days');
+      let end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM ') + ' - ' + end.format('MMMM D YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+     } );
+      </script>
+     
+<script>
+  function fullAdmin(){
+    let x = document.getElementById("userAccess");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } 
+  }
+  function myFunction() {
+    let x = document.getElementById("userAccess");
+    x.style.display = "block"
+    
+  }
+
+  function removeTag() {
+     let y = document.getElementById("employerTag");
+     y.style.display = "none"
+    }
+
+    function goBack() {
+  window.history.back();
+};
+  </script>
+  <script>
+    /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+</script>
+  </body>
+</html>

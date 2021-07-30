@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Brightstarz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Account software" name="description">
+    <meta content="Lunoz" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+  
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/theme.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+ 
+ <style>
+   body{
+    font-family: 'Rubik', sans-serif;
+    color: #4D4F5C;
+   }
+   .bg-gray{
+  background-color: #F5F6FA;
+}
+.tx-gray{
+  color: #4D4F5C;
+;
+}
+
+.table-preview td, .table-preview th{
+  font-size: 12px!important;
+}
+.table-preview td{
+  color: #4D4F5C;
+}
+
+.border-dash{
+    border: 1px dashed #e5e5e5;
+
+}
+
+thead{
+      background-color: #22570C;
+      color: #fff;
+    }
+  p{
+    font-size: 14px;
+  }
+  .tx-18{
+    font-size: 18px;
+  }
+  .tx-12{
+    font-size: 12px;
+  }
+  .tx-20{
+    font-size: 20px;
+  }
+  .tx-28{
+    font-size: 28px;
+  }
+  .tx-primary{
+    color: #4C9A2A;
+  }
+  .tx-bold{
+    font-weight: 700;
+  }
+  .logo{
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .btn-pri{
+    background-color: #4C9A2A;
+    color: white;
+  }
+  .btn-outline-pri{
+    border: 1px solid #4C9A2A;
+    color: #4C9A2A!important;
+  }
+  .status{
+    background-color:#FFCA83;
+    border-radius: 10px;
+  }
+ </style>
+ 
+  </head>
+  <body cz-shortcut-listen="true">
+
+    <div id="layout-wrapper">
+
+      <header id="page-topbar">
+        <div class="navbar-header">
+
+            <div class="d-flex align-items-left">
+                <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect"
+                    id="vertical-menu-btn">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
+
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo">
+                                <img src="../assets/img/logo.png">
+                            </a>
+                        </div>
+
+                   
+            </div>
+
+            <div class="d-flex align-items-center">
+
+
+
+
+                <div class="dropdown d-inline-block">
+
+
+                    <button type="button" class="btn header-item noti-icon waves-effect m-0"
+                        id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <span class="badge badge-danger badge-pill">3</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                        aria-labelledby="page-header-notifications-dropdown">
+                        <div class="p-3">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="m-0"> Notifications </h6>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="index.html#!" class="small"> View All</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar="init" style="max-height: 230px;">
+                            <div class="simplebar-wrapper" style="margin: 0px;">
+                                <div class="simplebar-height-auto-observer-wrapper">
+                                    <div class="simplebar-height-auto-observer"></div>
+                                </div>
+                              
+
+                            </div>
+                          
+                        </div>
+                       
+                    </div>
+                </div>
+
+           
+
+                <div class="dropdown d-inline-block ml-2">
+                    <button type="button" class="btn header-item waves-effect m-0" id="page-header-user-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rounded-circle header-profile-user" src="../assets/img/avatar-3.jpg"
+                            alt="Header Avatar">
+                        
+                        <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                     
+                        <a class="dropdown-item d-flex align-items-center justify-content-between"
+                            href="login.html">
+                            <span>Log Out</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+        <div class="vertical-menu mt-top">
+
+            <div data-simplebar="init" class="h-100 mm-show">
+                <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: -20px; bottom: 0px;">
+                            <div class="simplebar-content-wrapper"
+                                style="height: 100%; padding-right: 20px; padding-bottom: 0px; overflow: hidden scroll;">
+                                <div class="simplebar-content" style="padding: 0px;">
+
+                                    <div id="sidebar-menu">
+                                        <ul class="metismenu list-unstyled mm-show" id="side-menu">
+
+                                            <li class=" my-4">
+                                                <a href="index.html" class="waves-effect"><i
+                                                        class="">
+                                                    <img src="assets/img/home.svg" />
+                                                    </i><span>Home</span></a>
+                                            </li>
+                                            <span class="d-block px-4 text-muted small mb-2">CATEGORIES</span>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                        class="mr-2">
+                                                        <img src="assets/img/customers.svg" />
+                                                    </i><span>Customers</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="customer.html">Customer</a></li>
+                                                    <li><a href="sales.html">Sales</a></li>
+                                                    <li><a href="products.html">Products & Services</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/banking.svg" />
+                                                </i><span>Banking</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="banking.html">Banking</a></li>
+                                                    <li><a href="rules.html">Rules</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/sales.svg" />
+                                                </i><span>Sales</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="invoices.html">Invoices</a></li>
+                                                    <li><a href="retailer-invoices.html">Retailer invoices</a></li>
+                                                    <li><a href="sales-order.html">Sales Order</a></li>
+                                                    <li><a href="payment-received.html">Payment Received</a></li>
+                                                    <li><a href="billing.html">Billing</a></li>
+                                                </ul>
+                                            </li>
+                                          
+                                            <li>
+                                                <a href="budget.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/budgets.svg" />
+                                                </i><span>Budgets</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/Payroll.svg" />
+                                                </i><span>Payroll</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="payroll-setup.html">Payroll Setup</a></li>
+                                                    <li><a href="payroll-management.html">Institution Management</a></li>
+                                                    <li><a href="payroll-element.html">Pay Element</a></li>
+                                                    <li><a href="payroll-scale.html">Pay Scale</a></li>
+                                                    <li><a href="payroll-quick.html">Quick Payroll</a></li>
+                                                    <li><a href="payroll-log.html">Payroll Run Log</a></li>
+                                                    <li><a href="payroll-report.html">Payroll Report</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="taxes.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/Taxes.svg" />
+                                                </i><span>Taxes</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="reports.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/reports.svg" />
+                                                </i><span>Reports</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="inventory.html"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/inventory.svg" />
+                                                </i><span>Inventory</span></a>
+                         
+                                            <li>
+                                                <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                                    class="mr-2">
+                                                    <img src="assets/img/inventory.svg" />
+                                                </i><span>Expenses</span></a>
+                                                <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                    <li><a href="expenses.html">Expenses</a></li>
+                                                    <li><a href="vendors.html">Vendors</a></li>
+                                                </ul>
+                                            </li>
+                                            
+
+                                        </ul>
+                                    </div>
+                                    <!-- Sidebar -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simplebar-placeholder" style="width: auto; height: 657px;"></div>
+                </div>
+                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                    <div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;">
+                    </div>
+                </div>
+                <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                    <div class="simplebar-scrollbar"
+                        style="height: 494px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+
+            <div class="page-content bg-pale-b">
+                <div class="container-fluid">
+                    <div class="card shadow bg-white">
+                      <div class="card-body px-5">
+                        <div class="">
+                          <div class="row justify-content-between">
+                            <div class="col-md-6 col-12">
+                              <div>
+                                <img src="./assets/img/ic-image.svg" class="img-fluid rounded-circle logo" alt="">
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-12 mt-2">
+                              <div class="text-md-right mt-md-4">
+                                <p class="tx-primary tx-28 tx-bold">Invoice #23454</p>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="row justify-content-between mt-3">
+                            <div class="col-md-8 col-12">
+                                <label for="" class="mb-0 tx-gray tx-12">invoice to</label>
+                                <p class="tx-20 mb-1 tx-bold">John Doe</p>
+                                <p class="mb-0">795 Folsom Ave, Suite 600 <br/>
+                                  San Francisco, CA 94107
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-12 mt-2">
+                              <div class="float-md-right">
+                                <p class="mb-1"><span class="tx-bold">Order Date:</span> March 15, 2016 </p>
+                                <p class="mb-1"> <span class="tx-bold">Order Status:</span> <span class="badge status px-2">Pending</span></p>
+                                <p class="mb-1"><span class="tx-bold">Order ID:</span> #1234567</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                          <div class="card card-body py-0 px-0 bd-0 mt-5 border-0">
+                            <div class="table-responsive">
+                              <table id="" class="table  table-preview mb-0">
+                                <thead>
+                                    <tr class="">
+                                        <th>#</th>
+                                        <th>ITEM</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="thead">
+                                    <tr class="thead">
+                                        <td >1</td>
+                                        <td>Woman Peacoat</td>
+                                        <td>Lorem ipsum dolor sit amet Consectetur</td>
+                                        <td>432</td>
+                                        <td>$9,928</td>
+                                    </tr>
+                        
+                                    <tr>
+                                      <td >2</td>
+                                      <td>Woman Peacoat</td>
+                                        <td>Lorem ipsum dolor sit amet Consectetur</td>
+                                        <td>432</td>
+                                        <td>$9,928</td>
+                                  </tr>
+                                  <tr>
+                                    <td >3</td>
+                                    <td>Woman Peacoat</td>
+                                      <td>Lorem ipsum dolor sit amet Consectetur</td>
+                                      <td>432</td>
+                                      <td>$9,928</td>
+                                </tr>
+                                </tbody>
+                        
+                              </table>
+                            </div>
+                            <div class="row justify-content-between mt-4">
+                              <div class="col-lg-7 col-md-7">
+                                <p class="tx-20 tx-bold mb-2">Description</p>
+                                <p class="tx-14">Lorem ipsum dolor sit amet Consectetur Lorem ipsum dolor sit amet Consectetur Lorem ipsum dolor sit amet Consectetur Lorem ipsum dolor sit amet Consectetur</p>
+                              </div>
+                              <div class="col-lg-4 col-md-5 col-12">
+                                <div class="text-md-right">
+                                  <p class="mb-1"><span class="tx-bold">Sub-Total:</span> 2930.00 </p>
+                                  <p class="mb-1"> <span class="tx-bold">Discount:</span>12.9%</p>
+                                  <p class="mb-1"><span class="tx-bold">VAT:</span> 12.9%</p>
+                                  <p class="tx-28 tx-bold mt-3">NGN 2930.00</p>
+                                </div>
+                              </div>
+                            </div>
+                          
+                         
+                          <div class="row col-lg-9 col-12 px-0 py-3">
+                            <div class="col-md-4 col-7 mt-3">
+                              <button class="btn btn-pri w-100">Submit</button>
+                            </div>
+                            <div class="col-md-3 col-7 mt-3">
+                              <button class="btn btn-outline-pri w-100">Go back</button>
+                            </div>
+                            <div class="col-md-2 col-5 mt-3 px-md-0">
+                              <button class="btn w-100"><i class="fa fa-print tx-primary mr-1"></i> Print</button>
+                            </div>
+                            <div class="col-md-2 col-5 pl-0 mt-3 px-md-0">
+                              <button class="btn w-100"><i class="fa fa-share-alt tx-primary mr-1"></i> Share</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+                  </div>
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title h4" id="myExtraLargeModalLabel">Extra large modal</h5>
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Overlay-->
+    <div class="menu-overlay"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
